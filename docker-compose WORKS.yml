@@ -60,10 +60,6 @@ services:
   logstash:
     image: opensearchproject/logstash-oss-with-opensearch-output-plugin
     container_name: opensearch-logstash
-    volumes:
-    - ./:/config-dir
-    command: logstash -f /config-dir/logstash.conf  --config.reload.automatic
-
     ports:
       - 59899:59899
     networks:
